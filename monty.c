@@ -5,23 +5,24 @@
 *@argv: array of arguments
 *Return: 0(Success)
 */
-int main(argc, **argv)
+int main(int argc, char *argv[])
 {
 	FILE *file;
 	char buffer[LINE_MAX];/* Max that a line can hold */
-	int line_no;
+	size_t line_no;
 	stack_t *stack;
+	instruction_t instructions[4];
 
 	file = NULL;
 	stack = NULL;
 
 	/* array of instructions */
-	instruction_t instructions[] = {
-        {"push", push},
-        {"pop", pop},
-        {"pall", pall},
-        {NULL, NULL}/* array has to be null terminated */
-	}
+	instructions[4] = {
+		{"push", push},
+		{"pop", pop},
+		{"pall", pall},
+		{NULL, NULL} /* array has to be null terminated */
+	};
 	if (argc != 2)
 	{
 		fprintf(stderr, "Usage: monty <file.m>\n");

@@ -9,4 +9,4 @@ Developed by:
 
 Additional information
 ------------------------
-Usage: monty <file> where file is the path to the file containing the bytecode
+Usage: monty <file> (where file is the path to the file containing the bytecode)

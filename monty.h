@@ -2,6 +2,7 @@
 #define MONTY_H
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 /******** CONSTANTS *********/
 #define LINE_MAX 1024
@@ -40,9 +41,9 @@ typedef struct stack_s
 } stack_t;
 
 /************************ FUNCTION PROTOTYPES *************************/
-void process_line(char *line, unsigned int line_number, stack_t **stack);
+void processor(char *line, unsigned int line_no, stack_t **stack, instruction_t *instructions);
 void push(stack_t **stack, int value);
-void pop(stack_t **stack, unsigned int line_number);
-void pall(stack_t **stack, unsigned int line_number);
+void pop(stack_t **stack, unsigned int line_no);
+void pall(stack_t **stack);
 #endif
 
