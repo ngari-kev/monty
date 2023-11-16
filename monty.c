@@ -1,4 +1,5 @@
 #include "monty.h"
+
 /**
 *main - entry point
 *@argc: argument count
@@ -11,18 +12,11 @@ int main(int argc, char *argv[])
 	char buffer[LINE_MAX];/* Max that a line can hold */
 	size_t line_no;
 	stack_t *stack;
-	instruction_t instructions[4];
 
+	line_no = 0;
 	file = NULL;
 	stack = NULL;
 
-	/* array of instructions */
-	instructions[4] = {
-		{"push", push},
-		{"pop", pop},
-		{"pall", pall},
-		{NULL, NULL} /* array has to be null terminated */
-	};
 	if (argc != 2)
 	{
 		fprintf(stderr, "Usage: monty <file.m>\n");
