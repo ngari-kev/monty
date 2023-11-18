@@ -34,6 +34,11 @@ typedef struct stack_s
  * Description: opcode and its function
  * for stack, queues, LIFO, FIFO
  */
+typedef struct instruction_s
+{
+        char *opcode;
+        void (*f)(stack_t **stack, unsigned int line_number);
+} instruction_t;
 
 /************************ FUNCTION PROTOTYPES *************************/
 void processor(char *line, unsigned int line_no, stack_t **stack, instruction_t *instructions);
