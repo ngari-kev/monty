@@ -12,11 +12,17 @@ int main(int argc, char *argv[])
 	char buffer[LINE_MAX];/* Max that a line can hold */
 	size_t line_no;
 	stack_t *stack;
+	instruction_t instructions;
 
 	line_no = 0;
 	file = NULL;
 	stack = NULL;
 
+	instructions[3] = {
+	        {"push", push},
+	        {"pall", pall},
+        	{NULL, NULL} /* Array has to be null-terminated */
+	};
 	if (argc != 2)
 	{
 		fprintf(stderr, "Usage: monty <file.m>\n");
