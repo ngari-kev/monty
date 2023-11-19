@@ -18,6 +18,7 @@ int main(int argc, char *argv[])
 		{"pall", pall},
 		{"pint", pint},
 		{"swap", swap},
+		{"add", add},
 		{NULL, NULL}
 	};
 
