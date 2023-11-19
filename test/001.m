@@ -1,0 +1,4 @@
+push
+push 
+add
+pall

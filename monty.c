@@ -19,6 +19,7 @@ int main(int argc, char *argv[])
 		{"pint", pint},
 		{"swap", swap},
 		{"add", add},
+		{"nop", nop},
 		{NULL, NULL}
 	};
 
@@ -26,7 +27,6 @@ int main(int argc, char *argv[])
 	file = NULL;
 	stack = NULL;
 	buffer[LINE_MAX] = '\0';
-
 	if (argc != 2)
 	{
 		fprintf(stderr, "Usage: monty <file.m>\n");
@@ -43,11 +43,9 @@ int main(int argc, char *argv[])
 		line_no++;
 		/* tokennize and invoke appropriate function */
 		processor(buffer, line_no, &stack, instructions);
-		/* clear buffer for next line */
-		memset(buffer, 0, sizeof(buffer));
+		memset(buffer, 0, sizeof(buffer));/*clear buffer for next line*/
 	}
 	/* close file */
 	fclose(file);
 	return (EXIT_SUCCESS);
 }
-
