@@ -4,7 +4,7 @@
 *@stack: pointer to the stack
 *@value: int value to be pushed
 */
-void push(stack_t **stack, int value)
+void push(stack_t **stack, unsigned int value)
 {
 	stack_t *new_node;
 
@@ -33,7 +33,7 @@ void push(stack_t **stack, int value)
 *pall - prints all values in a stack
 *@stack: pointer to top element of the stack
 */
-void pall(stack_t **stack)
+void pall(stack_t **stack, unsigned int value)
 {
 	stack_t *current;
 
@@ -42,5 +42,9 @@ void pall(stack_t **stack)
 	{
 		printf("%d\n", current->n);
 		current = current->next;
+	}
+	if (stack == NULL)
+	{
+		printf("Line no: %d: stack is empty\n", value);
 	}
 }

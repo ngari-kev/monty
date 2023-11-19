@@ -42,9 +42,10 @@ typedef struct instruction_s
 
 /************************ FUNCTION PROTOTYPES *************************/
 void processor(char *line, unsigned int line_no, stack_t **stack, instruction_t *instructions);
-void push(stack_t **stack, int value);
+void push(stack_t **stack, unsigned int value);
 void pop(stack_t **stack, unsigned int line_no);
-void pall(stack_t **stack);
+void pall(stack_t **stack, unsigned int line_no);
+void pint(stack_t **stack, unsigned int line_number);
+void swap(stack_t **stack, unsigned int line_number);
 int main(int argc, char *argv[]);
 #endif
-

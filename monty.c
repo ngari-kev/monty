@@ -13,9 +13,11 @@ int main(int argc, char *argv[])
 	size_t line_no;
 	stack_t *stack;
 	instruction_t instructions[] = {
-		{"push", NULL},
-		{"pop", NULL},
-		{"pall", NULL},
+		{"push", push},
+		{"pop", pop},
+		{"pall", pall},
+		{"pint", pint},
+		{"swap", swap},
 		{NULL, NULL}
 	};
 
@@ -47,3 +49,4 @@ int main(int argc, char *argv[])
 	fclose(file);
 	return (EXIT_SUCCESS);
 }
+
