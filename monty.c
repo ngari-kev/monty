@@ -29,7 +29,7 @@ int main(int argc, char *argv[])
 	buffer[LINE_MAX] = '\0';
 	if (argc != 2)
 	{
-		fprintf(stderr, "Usage: monty file.m\n");
+		fprintf(stderr, "Usage: monty file\n");
 		return (EXIT_FAILURE);
 	}
 	file = fopen(argv[1], "r");
